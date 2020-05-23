@@ -219,7 +219,6 @@ Hopefully, you will never have to modify this code once you get it running and c
 
 Here is a simplified login component example to show how to use this vuex translation approach, you can, of course, create a mixin or a custom getter to facilitate the retrieval of your translations.
  
-{% raw %}
 ```html
 <template>
   <div v-if="!loading">
@@ -262,8 +261,7 @@ Here is a simplified login component example to show how to use this vuex transl
    }
  }
 </script>
-``` 
-{% endraw %}
+```
 
 And that's it, you won't have to think about concurrency and duplicated AJAX requests while loading translations in your components!
 
@@ -275,7 +273,6 @@ What I do is using the current git hash and set it in a `MyApp.hash` variable th
 
 You can find the current hash in PHP with the following line and store it in your HTML layout, you might want to store this value in a cached laravel config file to only execute it after a deploy:
 
-{% raw %}
 ```html
 <html>
   <head>
@@ -289,7 +286,6 @@ You can find the current hash in PHP with the following line and store it in you
   <!-- Your layout body -->
 </html>  
 ```
-{% endraw %}
 
 We also need to add a `hash` state property to know when we need to invalidate the cache.
 
