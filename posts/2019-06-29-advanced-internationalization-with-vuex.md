@@ -1,6 +1,8 @@
 ---
 title: Advanced internationalization with Vuex
+image: '/images/advanced-internationalization-with-vuex/advanced-internationalization-with-vuex.png'
 tags: [php, laravel, javascript, vuejs, vuex, internationalization]
+description: Battle tested principles and code architecture for internationalization on Vuex.
 excerpt: Battle tested principles and code architecture for internationalization on Vuex.
 date: 2019-06-29
 ---

@@ -1,7 +1,9 @@
 ---
 title: Linux for productivity and elegance
+image: '/images/linux-for-productivity-and-elegance/linux-for-productivity-and-elegance.png'
 tags: [linux, customization, rice, i3, polybar, gtk, rofi, dunst, rclone, productivity, design]
 excerpt: A blog series about creating a Linux desktop experience tailored to your specific usage and design tastes.
+description: A blog series about creating a Linux desktop experience tailored to your specific usage and design tastes.
 date: 2020-05-24
 ---
 

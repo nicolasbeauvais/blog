@@ -12,6 +12,7 @@
     "@vuepress/plugin-last-updated": "^1.4.0",
     "vue-tweet-embed": "^2.4.0",
     "vuepress": "^1.5.0",
+    "vuepress-plugin-autometa": "^0.1.13",
     "vuepress-plugin-disqus": "^0.2.0",
     "vuepress-plugin-rss": "^2.0.0",
     "vuepress-plugin-sitemap": "^2.1.2"
