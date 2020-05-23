@@ -13,7 +13,7 @@ module.exports = {
     ['meta', { name: 'keywords', content: 'Invariance, Nicolas Beauvais, blog, Software engineering, Vuejs, JavaScript, Laravel, PHP, Python, Linux' }],
     ['meta', { name: 'author', content: 'Nicolas Beauvais' }],
   ],
-  ga: 'UA-29129365-3',
+  ga: 'UA-29129365-12',
   themeConfig: {
     author: 'Nicolas Beauvais',
   },
