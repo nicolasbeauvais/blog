@@ -48,4 +48,4 @@ level!
 14. Custom keyboard mapping (work in progress)
 
 
-To get update when new articles are released, you can [follow me on Twitter](https://twitter.com/w3Nicolas) or subscribe to this blog RSS feed.
+To get update when new articles are released, you can [follow me on Twitter](https://twitter.com/w3Nicolas) or subscribe to this blog's RSS feed.
