@@ -128,9 +128,8 @@ This is where the magic happens, but we need to do a little more than a simple G
 
 Imagine you have a Tweet component that needs to load a translation file, and you use this component a hundred times on the same page, you certainly do not want to execute hundreds of API calls. 
 
-This is why we need implement a simple concurrency test in order to avoid executing a call that is already executed or currently retrieving translations.
+This is why we need to implement a simple concurrency test in order to avoid executing a call that is already executed or currently retrieving translations.
 
-We also don't need to 
 For each translation file key provided to this vuex action 3 states are possibles:
 
 - The translation file has not been retrieved yet
