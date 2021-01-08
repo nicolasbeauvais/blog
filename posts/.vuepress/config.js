@@ -18,7 +18,6 @@ module.exports = {
     author: 'Nicolas Beauvais',
   },
   plugins: [
-    '@vuepress/google-analytics',
     [
       'sitemap',
       {
@@ -36,7 +35,7 @@ module.exports = {
       {
         base_url: '/',
         site_url: 'https://invariance.dev',
-        copyright: '2020 Invariance',
+        copyright: (new Date()).getFullYear() + ' Invariance',
         count: 100
       }
     ],

@@ -1,4 +1,5 @@
 ---
+type: post
 title: Continuous AWS Elastic Beanstalk deployment
 image: '/images/continuous-aws-elastic-beanstalk-deployment/continuous-aws-elastic-beanstalk-deployment.jpg'
 tags: [aws, elastic, beanstalk, deployment, cd, devOps]

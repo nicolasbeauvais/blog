@@ -1,4 +1,5 @@
 ---
+type: post
 title: Linux for productivity and elegance
 image: '/images/linux-for-productivity-and-elegance/linux-for-productivity-and-elegance.png'
 tags: [linux, customization, rice, i3, polybar, gtk, rofi, dunst, rclone, productivity, design]

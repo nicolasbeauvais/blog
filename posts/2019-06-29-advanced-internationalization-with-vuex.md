@@ -1,4 +1,5 @@
 ---
+type: post
 title: Advanced internationalization with Vuex
 image: '/images/advanced-internationalization-with-vuex/advanced-internationalization-with-vuex.png'
 tags: [php, laravel, javascript, vuejs, vuex, internationalization]
