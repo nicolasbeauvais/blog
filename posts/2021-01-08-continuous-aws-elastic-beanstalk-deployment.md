@@ -2,8 +2,8 @@
 title: Continuous AWS Elastic Beanstalk deployment
 image: '/images/continuous-aws-elastic-beanstalk-deployment/continuous-aws-elastic-beanstalk-deployment.jpg'
 tags: [aws, elastic, beanstalk, deployment, cd, devOps]
-excerpt: A simple deployment script for AWS Elastic Beanstalk using the S3 storage and the AWS CLI. 
-description: A simple deployment script for AWS Elastic Beanstalk using the S3 storage and the AWS CLI. 
+excerpt: A simple deployment script tutorial for AWS Elastic Beanstalk using S3 storage and the AWS CLI. 
+description: A simple deployment script tutorial for AWS Elastic Beanstalk using S3 storage and the AWS CLI. 
 date: 2021-01-08
 ---
 
