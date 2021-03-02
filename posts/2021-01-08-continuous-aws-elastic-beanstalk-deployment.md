@@ -20,7 +20,7 @@ For my own sanity I had to find a way to automate deployment from the VPN secure
 better place than the CI/CD pipeline with some Bash scripting for that ? Leveraging the AWS CLI I managed to make 
 something good enough, the script is made of 5 blocks:
 
-- Cleaning files, fixing writes and creating a .zip archive
+- Cleaning files, fixing file rights and creating a .zip archive
 - Verify if the exact same archive has already been deployed
 - Upload the archive on S3
 - Trigger the Elastic Beanstalk deploy
