@@ -8,21 +8,26 @@ description: A simple deployment script tutorial for AWS Amplify using S3 storag
 date: 2021-03-03
 ---
 
-Is [two blog posts](/2021-01-08-continuous-aws-elastic-beanstalk-deployment.html) on a similar theme enough to call it a
-blog series ? Let's say yes and continue our journey in the world of enterprise deployment where you can't use already 
-made DevOps automation integrations because of the company VPN configuration.
+Is [two blog posts](/2021-01-08-continuous-aws-elastic-beanstalk-deployment.
+html) on a similar theme enough to call it a blog series ? Let's say yes and
+continue our journey in the world of enterprise deployment where you can't 
+use already made DevOps automation integrations because of the company VPN 
+configuration.
 
 Again, not cool.
 
-Anyway, finding solutions to problems is the #1 skill of a Software engineer, so let's dive on how to tackle this one.
-AWS Amplify is a do-it-all service for mobile and web apps, but the feature that got my interest is the static hosting.
-I wanted to use Amplify to deploy a [Nuxt.js](https://nuxtjs.org/) static app, with built-in global availability and 
-integration to the AWS ecosystem, Amplify is a great alternative to Netlify and Vercel for companies that like big
-hosting invoices. Amplify being fairly recent (2018) I tough it would be easier to deploy on it than on 
-Elastic Beanstalk, but I was remarkably wrong.
+Anyway, finding solutions to problems is the #1 skill of a Software engineer, so
+let's dive on how to tackle this one. AWS Amplify is a do-it-all service for 
+mobile and web apps, but the feature that got my interest is the static hosting.
+I wanted to use Amplify to deploy a [Nuxt.js](https://nuxtjs.org/) static app, 
+with built-in global availability and integration to the AWS ecosystem, Amplify 
+is a great alternative to Netlify and Vercel for companies that like big hosting 
+invoices. Amplify being fairly recent (2018) I tough it would be easier to 
+deploy on it than on Elastic Beanstalk, but I was remarkably wrong.
 
-It took me way too much time to write the deployment script for it, as the documentation is missing a lot of crucial 
-information, probably because I'm one of the few persons on earth that cannot use the built-in repository integration
+It took me way too much time to write the deployment script for it, as the 
+documentation is missing a lot of crucial information, probably because I'm one 
+of the few persons on earth that cannot use the built-in repository integration
 to enable automatic deployments.
 
 The deployment script that I ended up with is made of 10 steps, yes, 10 steps:
@@ -61,20 +66,23 @@ yarn run build
 printf "Create the code archive\n"  
 zip -q -r $archive dist/*
 
-# Check that the latest archive on s3 is not the same as the one we just created to avoid useless deployments
+# Check that the latest archive on s3 is not the same as the one we just created
+# to avoid useless deployments
 printf "Get the latest deployment checksum\n"
 
 printf "Generate current deploy checksum\n"
 CURRENT_MD5=$(find dist/ -type f -exec md5sum {} \; | sort -k 2 | md5sum)
 
 printf "Verify latest deploy checksum\n"
-LATEST_MD5=$(aws s3api head-object --bucket $s3_bucket --key $archive | jq -r '.Metadata.md5')
+LATEST_MD5=$(aws s3api head-object --bucket $s3_bucket --key $archive \
+  | jq -r '.Metadata.md5')
 
 if [ "$CURRENT_MD5" = "$LATEST_MD5" ]; then
     # No deploy required
     printf "The Latest project version is already deployed\n"
 else
-    # Save the archive to S3 with the MD5 checksum in metadata to simplify checks in the next deployment
+    # Save the archive to S3 with the MD5 checksum in metadata to simplify 
+    # checks in the next deployment
     aws s3 cp $archive s3://$s3_bucket/ --metadata md5="$CURRENT_MD5"
 
     # Get the latest Amplify job
@@ -85,8 +93,10 @@ else
         --max-items 1 > amplify-last-job.json
 
     # Store latest Amplify job status and id
-    AMPLIFY_LAST_JOB_STATUS=$(cat amplify-last-job.json | jq -r '.jobSummaries[].status')
-    AMPLIFY_LAST_JOB_ID=$(cat amplify-last-job.json | jq -r '.jobSummaries[].jobId')
+    AMPLIFY_LAST_JOB_STATUS=$(cat amplify-last-job.json \
+        | jq -r '.jobSummaries[].status')
+    AMPLIFY_LAST_JOB_ID=$(cat amplify-last-job.json \
+        | jq -r '.jobSummaries[].jobId')
 
     # Kill the last job if it is still pending from a previous deploy
     if [ "$AMPLIFY_LAST_JOB_STATUS" = "PENDING" ]; then
@@ -108,7 +118,9 @@ else
 
     # Upload the archive to Amplify
     printf "Upload archive\n"
-    curl -H "Content-Type: application/zip" $AMPLIFY_ZIP_UPLOAD_URL --upload-file $archive
+    curl -H "Content-Type: application/zip" \
+        $AMPLIFY_ZIP_UPLOAD_URL \
+        --upload-file $archive
 
     # Start the deployment
     printf "Start Amplify deployment\n"
@@ -121,8 +133,13 @@ else
     do
         sleep 10
 
-        # Poll the deployment job status every 10 seconds until it's not pending anymore
-        STATUS=$(aws amplify get-job --app-id $amplify_id --branch-name $git_branch --job-id $AMPLIFY_JOB_ID | jq -r '.job.summary.status')
+        # Poll the deployment job status every 10 seconds until it's not pending
+        # anymore
+        STATUS=$(aws amplify get-job \
+            --app-id $amplify_id \
+            --branch-name $git_branch \
+            --job-id $AMPLIFY_JOB_ID \
+            | jq -r '.job.summary.status')
 
         if [ $STATUS != 'PENDING' ]; then
           break
