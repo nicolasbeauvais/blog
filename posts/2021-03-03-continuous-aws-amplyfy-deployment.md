@@ -68,8 +68,6 @@ zip -q -r $archive dist/*
 
 # Check that the latest archive on s3 is not the same as the one we just created
 # to avoid useless deployments
-printf "Get the latest deployment checksum\n"
-
 printf "Generate current deploy checksum\n"
 CURRENT_MD5=$(find dist/ -type f -exec md5sum {} \; | sort -k 2 | md5sum)
 
