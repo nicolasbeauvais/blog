@@ -8,8 +8,8 @@ description: A simple deployment script tutorial for AWS Amplify using S3 storag
 date: 2021-03-03
 ---
 
-Is [two blog posts](/2021-01-08-continuous-aws-elastic-beanstalk-deployment.
-html) on a similar theme enough to call it a blog series ? Let's say yes and
+Is [two blog posts](/2021-01-08-continuous-aws-elastic-beanstalk-deployment.html)
+on a similar theme enough to call it a blog series ? Let's say yes and
 continue our journey in the world of enterprise deployment where you can't 
 use already made DevOps automation integrations because of the company VPN 
 configuration.
