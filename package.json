@@ -16,7 +16,7 @@
     "vuepress-plugin-sitemap": "^2.1.2"
   },
   "dependencies": {
-    "prismjs": "^1.21.0",
+    "prismjs": "^1.25.0",
     "timeago.js": "^4.0.2"
   }
 }
