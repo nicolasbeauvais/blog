@@ -26,7 +26,7 @@ console error in the browser. And if a malicious script kiddy troll want to
 send a payload to the endpoint, I do not want to the API response to contains 
 exactly how to correct a wrong payload.
 
-After some digging I found out that the `FormRequest` class has a 
+After some digging, I found out that the `FormRequest` class has a 
 `failedValidation` method that throw a `ValidationException`, caught by the 
 Laravel exception handler to create the default 422 response with the error bag.
 
@@ -61,7 +61,7 @@ By overriding this method in our own `FormRequest`, we can throw a custom
 showing any error message.
 
 Let's start by creating our custom exception, I named it 
-`SilentValidationException`, it take two parameters, first an instance of 
+`SilentValidationException`, it takes two parameters, first an instance of 
 the Laravel validator which will contain the errors of the `FormRequest` 
 validation, and a custom exception message. I chose to store the error payload
 as an array to reuse it later.
@@ -134,10 +134,10 @@ class ContentSecurityPolicyViolationRequest extends FormRequest
 
 Now, if you try that code, Laravel will handle our 
 `SilentValidationException` as any other exception and show an error page. 
-To avoid this, we need to change the exception handling behavior for this 
+To avoid this, we need to change the exception handling behaviour for this 
 particular exception. This can be done in the `app/Exceptions/Handler.php` file.
 
-There is two things to do in that file, we first want to register our custom 
+There are two things to do in that file, we first want to register our custom 
 exception in the `$dontReport` array to avoid logging the error in your log 
 file, Sentry, Flare or whatever error service that you use. 
 
@@ -202,6 +202,6 @@ class Handler extends ExceptionHandler
 }
 ```
 
-That's it! you now know how to silently validate a payload using a Laravel 
+That's it! You now know how to silently validate a payload using a Laravel 
 Form Request.
 
