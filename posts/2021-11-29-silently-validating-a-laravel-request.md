@@ -4,9 +4,7 @@ title: Silently validating a Laravel request
 image: '/images/silently-validating-a-laravel-request/silently-validating-a
 -laravel-request.jpg'
 tags: [laravel, validation, exception]
-excerpt: In some cases, the Laravel validator gives out too many details. What 
-if we want to use the power of the validator without giving anything in the 
-response? 
+excerpt: In some cases, the Laravel validator gives out too many details. What if we want to use the power of the validator without giving anything in the response? 
 date: 2021-11-29
 ---
 
