@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   title: 'Invariance',
-  description: 'Exploring all subject around software engineering, developer productivity and life.',
+  description: 'Exploring all subject around software engineering and productivity.',
   dest: path.resolve(__dirname, '../../dist'),
   evergreen: true,
   locales: {
