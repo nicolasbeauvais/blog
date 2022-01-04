@@ -9,13 +9,13 @@ date: 2022-01-03
 
 I always try to avoid using Electron apps when I can, more so when I need them running all day like Slack. It doesn't make much sense to me, it forces my computer to run another webkit engine just for Slack when it already works perfectly in a browser.
 
-But Slack does not offer a way to get all workspaces notifications in a single tab, and keeping 3-5 open tabs just for Slack is too annoying, making the Electron app mandatory to use. 
+But Slack does not offer a way to get all workspaces notifications in a single tab, and keeping 3-5 open tabs just for it is annoying, making the Electron app mandatory to use. 
 
-If you were stuck like me in this situation, I have exactly what you need: a way to activate Slack's workspace switcher in your web browser!
+If you were stuck like me in this situation, I have exactly what you need: **a way to activate Slack's workspace switcher in your web browser**!
 
-![Slack workspaces](/images/slack-workspaces-in-the-browser/slack-workspaces.jpg)
+<CaptionImage src="/images/slack-workspaces-in-the-browser/slack-workspaces.jpg" alt="Slack workspaces" caption="Worspaces switcher in the browser" /> 
 
-It's quite simple to activate, all you need is to change your favorite browser's user agent to make Slack think that you are using a chromebook, as detailed in [this stack exchange thread](https://webapps.stackexchange.com/questions/144258/slacks-web-version-shows-workspace-switching-sidebar-but-only-on-chromebooks)
+All you need to make this work is to change your favorite browser's user agent to make Slack think that you are using a chromebook, as detailed in [this stack exchange thread](https://webapps.stackexchange.com/questions/144258/slacks-web-version-shows-workspace-switching-sidebar-but-only-on-chromebooks).
 
 You can use the great Tampermonkey extension, or similar, to easily change your user agent on the Slack website. If you do not know about this extension, it allows you to run a user-defined script on a particular website, and more things outside this article's scope.
 
@@ -44,6 +44,9 @@ Once installed, you need to create the following script that will change your us
 })();
 ```
 
-You can find many online tutorial to learn how to use Tampermonkey to add this script.
+If you never used Tampermonkey before, you can find many online tutorial 
+that will show you how to add a script. 
+
+> Be careful with the scripts that you add to Tampermonkey, you should never add code that you do not fully understand.
 
 And that's it, you can now open all your Slack workspaces in a single tab, and receive all notifications, just like with the Electron app.
