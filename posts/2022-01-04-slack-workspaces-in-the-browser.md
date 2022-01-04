@@ -37,7 +37,7 @@ Once installed, you need to create the following script that will change your us
 // ==/UserScript==
 
 (function () {
-	'use strict';
+    'use strict';
     Object.defineProperty(navigator, 'userAgent', {
         value: 'Mozilla/5.0 (X11; CrOS x86_64 10066.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36'
     });
