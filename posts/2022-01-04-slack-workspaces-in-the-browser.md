@@ -4,7 +4,7 @@ title: Slack workspaces in the browser
 image: '/images/slack-workspaces-in-the-browser/slack-workspaces-in-the-browser.jpg'
 tags: [slack, productivity, user-script]
 excerpt: A quick guide to activate workspace on the Slack website, and avoid using the electron app.
-date: 2022-01-03
+date: 2022-01-04
 ---
 
 I always try to avoid using Electron apps when I can, more so when I need them running all day like Slack. It doesn't make much sense to me, it forces my computer to run another webkit engine just for Slack when it already works perfectly in a browser.
@@ -28,7 +28,7 @@ Once installed, you need to create the following script that will change your us
 // ==UserScript==
 // @name        Enable Slack workspaces in the browser
 // @namespace   slack.com
-// @version     1
+// @version     https://dev.to/nicolasbeauvais
 // @description Enable Slack workspaces in the browser
 // @match       https://app.slack.com/*
 // @match       https://app.slack.com/
