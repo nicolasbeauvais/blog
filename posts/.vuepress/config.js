@@ -25,12 +25,6 @@ module.exports = {
       }
     ],
     [
-      'disqus',
-      {
-        shortname: 'invariance',
-      }
-    ],
-    [
       'vuepress-plugin-rss',
       {
         base_url: '/',

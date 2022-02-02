@@ -7,8 +7,6 @@
       <time>{{ (new Date($page.frontmatter.date)).toLocaleString('default', { month: 'long', day: 'numeric', year: 'numeric' }) }}</time>
     </div>
     <Content />
-
-    <Disqus />
   </section>
 </template>
 
