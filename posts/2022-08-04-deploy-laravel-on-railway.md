@@ -3,7 +3,7 @@ type: post
 title: Deploy Laravel on Railway
 image: '/images/deploy-laravel-on-railway/deploy-laravel-on-railway.jpg'
 tags: [Laravel, Railway, Deploy, Cache, Queue, Scaling]
-excerpt: The missing Railway tutorial on deploying real world Laravel apps
+excerpt: The missing Railway tutorial on deploying real world Laravel applications.
 date: 2022-08-04
 ---
 

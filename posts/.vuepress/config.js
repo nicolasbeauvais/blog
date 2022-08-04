@@ -12,8 +12,8 @@ module.exports = {
     ['link', { rel: 'shortcut icon', href: '/favicon.svg' }],
     ['meta', { name: 'keywords', content: 'Invariance, Nicolas Beauvais, blog, Software engineering, Vuejs, JavaScript, Laravel, PHP, Python, Linux' }],
     ['meta', { name: 'author', content: 'Nicolas Beauvais' }],
+    ['script', {src: 'https://static.cloudflareinsights.com/beacon.min.js', defer: true, 'data-cf-beacon': '{"token": "c0bd4b7bf15040ba85976662ff0582c8"}'}]
   ],
-  ga: 'UA-29129365-12',
   themeConfig: {
     author: 'Nicolas Beauvais',
   },
