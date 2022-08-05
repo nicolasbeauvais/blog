@@ -23,7 +23,7 @@ On a standard Laravel project, Nixpacks will set up nginx to handle requests, PH
 
 Creating a project is straightforward, just head to [Railway.app/new](https://railway.app/new), set up your account, and choose the repository to deploy.
 
-<CaptionImage src="/images/deploy-laravel-on-railway/new.png" alt="New Railway project" caption="New Railway project" />
+<CaptionImage src="/images/deploy-laravel-on-railway/new-project.png" alt="New Railway project" caption="New Railway project" />
 
 If you gave Railway access to a GitHub repository, you automatically got push-to-deploy setup, pretty nice.
 
