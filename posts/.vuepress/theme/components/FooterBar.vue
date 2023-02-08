@@ -1,6 +1,9 @@
 <template>
   <footer class="footer">
-    © {{ thisYear }} · {{ author }} · <a href="https://github.com/nicolasbeauvais">GitHub</a> · <a href="https://twitter.com/w3Nicolas">Twitter</a>
+    <p>
+      © {{ thisYear }} · {{ author }} · <a href="https://github.com/nicolasbeauvais">GitHub</a> · <a href="https://twitter.com/w3Nicolas">Twitter</a>
+    </p>
+    <p>Support my work with <a href="https://minkit.io/">MinKit active monitoring</a>.</p>
   </footer>
 </template>
 
