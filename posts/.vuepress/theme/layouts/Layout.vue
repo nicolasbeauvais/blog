@@ -9,7 +9,7 @@
         <h4 class="site-subtitle">{{ $site.description }}</h4>
       </router-link>
 
-      <p>Support my work with <a href="https://minkit.io/">MinKit website monitoring</a>.</p>
+      <p>Support my work with <a href="https://phare.io/">Phare website monitoring</a>.</p>
 
       <div style="clear: both" />
       <nav-bar />
